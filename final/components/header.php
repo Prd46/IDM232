@@ -9,12 +9,4 @@
   <title>Home</title>
 </head>
 <body>
-<div class = 'header'>
-    <h1>Progrecipes</h1>
-    <h2>The place to check out the newest and tastiest recipes!</h2>
-    <div class='navBar'> 
-        <div class='searchBar'>
-            <input class='searcher' type='text' placeholder='Search for your recipe'>
-        </div>
-    </div>    
-</div>
+    <p>header</p>

@@ -33,7 +33,68 @@ var_dump($cookies); ?>
   $basicMathValue = ((1+2+$var1) * $var2) / 2 - 5;
   // (6) * 4 / 2 - 5  ->  24/2 - 5 
   echo $basicMathValue;
-  //Use ++ to incriment by 1, setting a variable to a different number. Use -- to subtract 1. 
   ?>
+<?php
+  $a = 3;
+  $b = 4; 
+if ($a<$b) {
+echo 'A';
+}
+//Gonna use this to check if a user is logged in as an admin. 
+
+//SWITCHES
+
+$a = 3;
+
+switch($a){
+  case 0;
+    echo 'a equals 0';
+  case 1;
+    echo 'a equals 1';
+  case 3;
+    echo 'a equals 3';
+    break; // CUTS OFF SWITCH FROM READING ALL THE OTHERS AFTER THAT. 
+  case 4;
+    echo 'a equals 4';
+}
+
+//LOOPS
+
+$count = 0;
+while ($count <= 10){
+  echo $count;
+  $count++;
+}
+
+$count = 0;
+for ($count; $count<=10; $count++){
+  echo $count . ', ';
+}
+
+$ages = [4, 7, 15, 16, 20];
+foreach($ages as $asdf){ //CREATES the age variable, looping through the AGES array. 
+  echo "Age: {$asdf}<br>";
+}
+
+//functions
+
+function say_hello()
+{
+  echo 'hello world!<br>';
+}
+
+function say_something($word, $w2)
+{
+  echo "hello {$word}<br>";
+  echo "hello {$w2}<br>";
+}
+
+say_hello();
+say_something('cowboy!', 'pizza'); // In the parentheses of the function calling, you need to put values for the listed variables. 
+//use GLOBAL to access outside variables inside the function. 
+?>
+
+
+
 </body>
 </html>

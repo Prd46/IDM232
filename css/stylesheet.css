@@ -1,0 +1,30 @@
+body{
+    background-color: bisque;
+    text-align: left;
+}
+.header{
+    background-color: purple;
+}
+.navBar{
+    background-color: aqua;
+    display: grid;
+}
+.searcher{
+    display: flex;
+    font-size: 1rem;
+    justify-self: center;
+    margin: 2rem;
+    padding: 1rem;
+    width: 60%;
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+.postScroll{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
