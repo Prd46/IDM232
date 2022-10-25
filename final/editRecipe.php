@@ -1,6 +1,6 @@
 <?php 
 if (!isset($page_name)) {
-  $page_name = 'Details'; // Gives a value if page name is missing
+  $page_name = 'Edit'; // Gives a value if page name is missing
 }
 
 $site_name = 'Progrecipes';
@@ -36,6 +36,5 @@ $document_title = $page_name . ' | ' . $site_name;
         <li>Step</li>
       </ol>
     </div>
-
   </main>
-<?php include "components/footer.php" ?>
+  <?php include "components/footer.php" ?>
