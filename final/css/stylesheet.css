@@ -30,7 +30,7 @@ p{
     z-index: 2;
 }
 :visited{
-    color: white;
+    color: rgb(255, 0, 0);
 }
 
 
@@ -134,9 +134,98 @@ p{
 
 /*Recipe details*/
 .detailsFeatured{
-    width: 100%
+    width: 20rem;
+}
+.recipeCard{
+    background-color: white;
+    box-shadow: 5px 5px 5px gray;
+    display: flex;
+    margin: 1rem 3rem;
+    padding: 1rem;
+    width: 80%
+}
+.recipeIngredients{
+    background-color: white;
+    box-shadow: 5px 5px 5px gray;
+    margin: 1rem 3rem;
+    padding: 1rem;
+    width: 80%
+}
+.recipeInstructions{
+    background-color: white;
+    box-shadow: 5px 5px 5px gray;
+    margin: 1rem 3rem;
+    padding: 1rem;
+    width: 80%
 }
 
+/*Results*/
+.results{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.search__results{
+    margin: 0 auto;
+}
+
+/*Admin*/
+
+.admin__actions{
+    display: flex;
+    flex-direction: row;
+    margin: 3rem;
+}
+.admin__link{
+    margin: 0 2rem;
+}
+.admin__recipes{
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+}
+.recipe__listing{
+    display: flex;
+    flex-direction: row;
+}
+.recipe__title{
+    background-color: white;
+    border: solid 2px black;
+    width: 12rem;
+    padding: 1rem;
+}
+.recipe__type{
+    background-color: white;
+    border: solid 2px black;
+    width: 4rem;
+    padding: 1rem;
+}
+.recipe__time{
+    background-color: white;
+    border: solid 2px black;
+    width: 4rem;
+    padding: 1rem;
+}
+.recipe__rating{
+    background-color: white;
+    border: solid 2px black;
+    width: 4rem;
+    padding: 1rem;
+}
+.recipe__edit{
+    background-color: white;
+    border: solid 2px black;
+    width: 4rem;
+    padding: 1rem;
+    
+}
+.recipe__delete{
+    background-color: white;
+    border: solid 2px black;
+    width: 4rem;
+    padding: 1rem;
+    
+}
 @media screen and (max-width: 750px){
     .cont__head{
         flex-direction: column;

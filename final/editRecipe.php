@@ -9,10 +9,12 @@ $document_title = $page_name . ' | ' . $site_name;
 <?php include "components/header.php" ?>
   <main>
     <div class="recipeCard">
-    <img class="detailsFeatured" src="media/fenchfy.jpg" />
+    <img class="detailsFeatured" src="https://via.placeholder.com/150" />
+    <div class="recipeInfo">
     <h3>Crispy French Fries</h3>
     <p>Prep time: 20 minutes</p>
     <p>Rating: 4.2 stars</p>
+    </div>
     </div>
 
     <div class="recipeIngredients">

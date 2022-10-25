@@ -24,6 +24,30 @@ $document_title = $page_name . ' | ' . $site_name;
                     <div class="recipe__edit">Edit</div>
                     <div class="recipe__delete">Delete</div>
                 </div>
+                <div class="recipe__listing">
+                    <div class="recipe__title">Title</div>
+                    <div class="recipe__type">Type</div>
+                    <div class="recipe__time">Prep time</div>
+                    <div class="recipe__rating">Rating</div>
+                    <div class="recipe__edit">Edit</div>
+                    <div class="recipe__delete">Delete</div>
+                </div>
+                <div class="recipe__listing">
+                    <div class="recipe__title">Title</div>
+                    <div class="recipe__type">Type</div>
+                    <div class="recipe__time">Prep time</div>
+                    <div class="recipe__rating">Rating</div>
+                    <div class="recipe__edit">Edit</div>
+                    <div class="recipe__delete">Delete</div>
+                </div>
+                <div class="recipe__listing">
+                    <div class="recipe__title">Title</div>
+                    <div class="recipe__type">Type</div>
+                    <div class="recipe__time">Prep time</div>
+                    <div class="recipe__rating">Rating</div>
+                    <div class="recipe__edit">Edit</div>
+                    <div class="recipe__delete">Delete</div>
+                </div>
             </div>
         </div>
   </main>
