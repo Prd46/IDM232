@@ -1,14 +1,88 @@
-<?php 
-if (!isset($page_name)) {
-  $page_name = 'Recipes'; // Gives a value if page name is missing
-}
-
-$site_name = 'Progrecipes';
-$document_title = $page_name . ' | ' . $site_name;
-?>
-<?php include "components/header.php" ?>
-<main>
-    <?php include "components/sidebar.php" ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+<body>
+    <header>
+        <div class="container cont__head">
+            <div class="header__mobile">
+            <h1 class="header__title">Progrecipes</h1>
+            <img class="header__menuButton" src="https://via.placeholder.com/50" />
+        </div>
+            <input type="search" class="header__search" placeholder="What are you hungry for?">
+            <div class="header__recipes"><p class="header__button">Recipes</p></div>
+            <div class="header__login"><p class="header__button">Login</p></div>
+            <!--<div class="header__loginModal">
+                <input type="email">
+                <input type="password">
+                <p>Don't have an account?</p>
+                <p>Sign up</p>
+            </div> -->
+        </div>
+        <div class="header__mobileModal">
+            <div class="modal__button">Recipes</div>
+            <div class="modal__button">Filters</div>
+            <div class="modal__button">Login</div>
+        </div>
+    </header>
+    <main>
+        <div class="container cont__main">
+            <div class="main__categories">
+                    <h2>Filter by type</h2>
+                <div class="main__categories__list">
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">American</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">Cajun</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">Carribean</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">Chinese</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">French</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">German</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">Greek</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">Indian</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">Italian</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">Japanese</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">Mediterranean</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">Mexican</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">Russian</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">Spanish</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox"><p class="category__title">Thai</p>
+                    </div>
+                </div>
+            </div>
             <div class="main__inventory">
                 <h2>Appetizers</h2>
                 <div class="main__contentReel">
@@ -22,7 +96,7 @@ $document_title = $page_name . ' | ' . $site_name;
                     </div>
                     <div class="main__contentRow"></div>
                         <div class="post">
-                            <a href="details.php"><img class="featured" src="media/fenchfy.jpg" /></a>
+                            <img class="featured" src="https://via.placeholder.com/150" />
                          </div>
                          <div class="post">
                             <img class="featured" src="https://via.placeholder.com/150" />
@@ -133,4 +207,11 @@ $document_title = $page_name . ' | ' . $site_name;
                 </div>
             </div>
     </main>
-<?php include "components/footer.php" ?>
+    <footer>
+        <div class="container cont__foot">
+            <p>&#169; <!--<?php echo date('Y'); ?>--> Paul DiGerolamo</p> 
+        </div>
+    </footer>
+    <script src="../../scripts/app.js"></script>
+</body>
+</html>
