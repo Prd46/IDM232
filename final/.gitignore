@@ -1,1 +1,2 @@
-.env.php
+.env.production.php
+.env.local.php
