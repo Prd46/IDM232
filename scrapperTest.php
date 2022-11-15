@@ -96,5 +96,9 @@ say_something('cowboy!', 'pizza'); // In the parentheses of the function calling
 
 
 
+<?php include __DIR__ . '/app.php'; ?>//Allows you to shorten path using directory.
+
+
+
 </body>
 </html>

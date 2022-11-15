@@ -1,19 +1,14 @@
 <?php 
-if (!isset($page_name)) {
-  $page_name = 'Details'; // Gives a value if page name is missing
-}
-
-$site_name = 'Progrecipes';
-$document_title = $page_name . ' | ' . $site_name;
+  $page_name = 'Recipe Details'; // Gives a value if page name is missing
 ?>
 <?php include "components/header.php" ?>
   <main>
     <div class="recipeCard">
       <img class="detailsFeatured" src="media/fenchfy.jpg" />
       <div class="recipeInfo">
-      <h3>Crispy French Fries</h3>
-      <p>Prep time: 20 minutes</p>
-      <p>Rating: 4.2 stars</p>
+        <h3>Crispy French Fries</h3>
+        <p>Prep time: 20 minutes</p>
+        <p>Rating: 4.2 stars</p>
       </div>
     </div>
 

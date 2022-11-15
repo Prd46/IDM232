@@ -1,10 +1,5 @@
 <?php 
-if (!isset($page_name)) {
-  $page_name = 'Edit'; // Gives a value if page name is missing
-}
-
-$site_name = 'Progrecipes';
-$document_title = $page_name . ' | ' . $site_name;
+  $page_name = 'Edit Recipe'; // Gives a value if page name is missing
 ?>
 <?php include "components/header.php" ?>
   <main>
