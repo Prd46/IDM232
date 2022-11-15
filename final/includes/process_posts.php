@@ -17,8 +17,8 @@ $result = add_recipe($title, $prepTime, $rating, $ingredients, $steps);
 
 // Check there are no errors with our SQL statement
 if ($result) {
-    redirect_to(__DIR__ . '/allRecipes.php');
+    redirect_to('/allRecipes.php');
 } else {
     $error_message = 'Sorry there was an error creating the recipe';
-    redirect_to('/admin/services?error=' . $error_message);
+    echo error_message();
 }

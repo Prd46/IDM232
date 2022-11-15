@@ -1,6 +1,6 @@
 <?php 
    include_once __DIR__ .'/connection.php'; 
-  $page_name = 'Recipe Details'; // Gives a value if page name is missing
+  $page_name = 'Add Recipe'; // Gives a value if page name is missing
   include "components/header.php" 
 ?>
 
