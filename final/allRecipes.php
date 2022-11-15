@@ -1,9 +1,11 @@
 
-<?php include_once __DIR__ .  "/components/header.php";
-  $page_name = 'All Recipes'; // Gives a value if page name is missing
-   include_once __DIR__ . '/connection.php';?>
 <?php 
-  $page_name = 'All Recipes'; // Gives a value if page name is missing
+include_once __DIR__ . '/connection.php';
+$page_name = 'All Recipes'; // Gives a value if page name is missing
+include_once __DIR__ .  "/components/header.php";
+
+   ?>
+<?php 
   $recipes = get_recipes();
 ?>
   <main>

@@ -17,13 +17,16 @@ if ($result->num_rows > 0) {
 
 ?>
 <main>
-    <form action="includes/edit_post.php" method="POST">
+    <form action="<?php echo site_url(); ?>/includes/edit_post.php" method="POST">
     <div class="recipeCard">
       <img class="detailsFeatured" src="media/fenchfy.jpg" />
       <div class="recipeInfo">
-        <label for="">Title</label> <input class="recipeTitle" type="text" name="title" value="<?php echo $recipe['title']?>">
-        <label for="">Prep Time</label> <input class="recipePrepTime" type="text" name="prepTime" value="<?php echo $recipe['prepTime']?>">
-        <label for="">Rating</label> <input class="recipeRating" type="text" name="rating" value="<?php echo $recipe['rating']?>">
+        <label for="">Title</label> 
+        <input class="recipeTitle" type="text" name="title" value="<?php echo $recipe['title']?>">
+        <label for="">Prep Time</label> 
+        <input class="recipePrepTime" type="text" name="prepTime" value="<?php echo $recipe['prepTime']?>">
+        <label for="">Rating</label> 
+        <input class="recipeRating" type="text" name="rating" value="<?php echo $recipe['rating']?>">
       </div>
     </div>
 
@@ -31,17 +34,17 @@ if ($result->num_rows > 0) {
         <label for="">Ingredients</label>
                 <br>
                 <textarea class="recipeIngredients js-tinymce" name="ingredients" id="" cols="30"
-                  rows="10" value="<?php echo $recipe['ingredients']?>"></textarea>
+                  rows="10"><?php echo $recipe['ingredients']?></textarea>
     </div>
 
     <div class="recipeInstructions">
         <label for="">Steps</label>
                 <br>
                 <textarea class="recipeSteps js-tinymce" name="steps" id="" cols="30"
-                  rows="10" value="<?php echo $recipe['steps']?>"></textarea>
+                  rows="10"><?php echo $recipe['steps']?></textarea>
     </div>
     <input type="submit" value="submit">
-    <input type="hidden" name="id" value="">
+    <input type="hidden" name="id" value="<?php echo $recipe['id']?>">
 </form>
   </main>
 <?php include "components/footer.php" ?>
