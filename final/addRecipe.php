@@ -4,11 +4,18 @@
   include "components/header.php" 
 ?>
 
+<?php
+// get users data from database
+$query = 'SELECT * FROM recipes';
+$result = mysqli_query($db_connection, $query);
+
+?>
 <main>
     <form action="includes/process_posts.php" method="POST">
     <div class="recipeCard">
       <img class="detailsFeatured" src="media/fenchfy.jpg" />
       <div class="recipeInfo">
+      <label for="">Image</label> <input class="recipeImage" type="text" name="image">
         <label for="">Title</label> <input class="recipeTitle" type="text" name="title">
         <label for="">Prep Time</label> <input class="recipePrepTime" type="text" name="prepTime">
         <label for="">Rating</label> <input class="recipeRating" type="text" name="rating">

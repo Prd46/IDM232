@@ -13,12 +13,6 @@ if (!isset($recipes)) {
       <th scope="col">Rating</th>
       <th scope="col">Ingredients</th>
       <th scope="col">Steps</th>
-      <th scope="col">
-        <span class="sr-only">Edit</span>
-      </th>
-      <th scope="col">
-        <span class="sr-only">Delete</span>
-      </th>
     </tr>
   </thead>
   <tbody class="divide-y divide-gray-200 bg-white">
@@ -35,10 +29,6 @@ if (!isset($recipes)) {
             <td>{$recipe['rating']}</td>
             <td>{$recipe['ingredients']}</td>
             <td>{$recipe['steps']}</td>
-            <td>
-              <a href='{$site_url}/editRecipe.php?id={$recipe['id']}'>Edit</a>
-              <a href='{$site_url}/includes/deleteRecipe.php?id={$recipe['id']}'>Delete</a>
-            </td>
           </tr>";
     }
 ?>

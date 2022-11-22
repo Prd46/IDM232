@@ -52,8 +52,6 @@ include_once __DIR__ .  "/components/header.php";
   <div class="admin__main">
             <div class="admin__actions">
                 <a href="addRecipe.php" class="admin__link">Add</a>
-                <a href="editRecipe.php" class="admin__link">Edit</a>
-                <p class="admin__link">Delete</p>
             </div>
             <?php include __DIR__ . '/components/recipesTable.php'; ?>
   </main>

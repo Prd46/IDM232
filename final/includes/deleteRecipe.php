@@ -7,7 +7,7 @@ if (isset($_GET['id'])) {
     die('ID is needed in URL');
 }
 
-$result = delete_service_by_id($id);
+$result = delete_recipe_by_id($id);
 
 // Check there are no errors with our SQL statement
 if ($result) {
