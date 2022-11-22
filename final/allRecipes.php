@@ -30,7 +30,7 @@ include_once __DIR__ .  "/components/header.php";
     }
 ?>
   <main>
-  <?php include __DIR__ ."/components/sidebar.php"?>
+  <?php include_once __DIR__ ."/components/sidebar.php"?>
   <?php
         // If error query param exist, show error message
           if (isset($_GET['error'])) {

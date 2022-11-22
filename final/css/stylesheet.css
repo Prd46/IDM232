@@ -54,7 +54,7 @@ p, li{
     z-index: 2;
 }
 :visited{
-    color: rgb(255, 255, 255);
+    color: rgb(151, 179, 255);
 }
 
 
@@ -262,6 +262,12 @@ p, li{
     width: 4rem;
     padding: 1rem;
     
+}
+
+.searchResultTable{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 @media screen and (max-width: 750px){
     .cont__head{
