@@ -36,8 +36,10 @@ if (!isset($recipes)) {
             <td>{$recipe['ingredients']}</td>
             <td>{$recipe['steps']}</td>
             <td>
-              <a href='{$site_url}/editRecipe.php?id={$recipe['id']}'>Edit</a>
-              <a href='{$site_url}/includes/deleteRecipe.php?id={$recipe['id']}'>Delete</a>
+              <a href='{$site_url}/editRecipe.php?id={$recipe['id']}' class='adminTableFunction'>Edit</a>
+            </td>
+            <td>
+            <a href='{$site_url}/includes/deleteRecipe.php?id={$recipe['id']}' class='adminTableFunction'>Delete</a>
             </td>
           </tr>";
     }

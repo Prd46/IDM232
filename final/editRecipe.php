@@ -22,13 +22,13 @@ if ($result->num_rows > 0) {
       <img class="detailsFeatured" src="media/fenchfy.jpg" />
       <div class="recipeInfo">
       <label for="">Image</label> 
-        <input class="recipeTitle" type="text" name="image" value="<?php echo $recipe['image']?>">
+        <input class="recipeInput" type="text" name="image" value="<?php echo $recipe['image_path']?>">
         <label for="">Title</label> 
-        <input class="recipeTitle" type="text" name="title" value="<?php echo $recipe['title']?>">
+        <input class="recipeInput" type="text" name="title" value="<?php echo $recipe['title']?>">
         <label for="">Prep Time</label> 
-        <input class="recipePrepTime" type="text" name="prepTime" value="<?php echo $recipe['prepTime']?>">
+        <input class="recipeInput" type="text" name="prepTime" value="<?php echo $recipe['prepTime']?>">
         <label for="">Rating</label> 
-        <input class="recipeRating" type="text" name="rating" value="<?php echo $recipe['rating']?>">
+        <input class="recipeInput" type="text" name="rating" value="<?php echo $recipe['rating']?>">
       </div>
     </div>
 

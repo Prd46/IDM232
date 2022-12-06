@@ -29,7 +29,6 @@ if (in_array($_SERVER['REMOTE_ADDR'], $whitelist_host)) {
 // Include the database connection. Order matters and should always be first
 include_once __DIR__ . '/includes/databaseVars.php';
 include_once __DIR__ . '/includes/functions.php';
-/*include_once __DIR__ . '/includes/process_users.php';*/
 include_once __DIR__ . '/includes/posts_SQL.php';
 // Credentials for the database connection coming from our .env file
 ?>

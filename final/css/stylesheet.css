@@ -24,8 +24,7 @@ h1, h2, h3, h4, a{
     font-family: 'Kalam', Arial, Helvetica, sans-serif;  
 }
 a{  
-    border: 2px solid black;
-    color: rgb(81, 0, 255);
+    color: white;
     text-decoration: none;
 }
 p, li{
@@ -35,8 +34,10 @@ p, li{
     align-items: center;
     background-image: linear-gradient(180deg, #0179AD, #01628c);
     box-shadow: 0px 3px 5px rgb(1, 26, 70);
-    color: white;
+    color: rgb(255, 255, 255);
     display: flex;
+    justify-content: space-between;
+    justify-items: center;
     padding: .25rem 2rem;
     position: sticky;
     z-index: 3;
@@ -54,10 +55,29 @@ p, li{
     z-index: 2;
 }
 :visited{
-    color: rgb(151, 179, 255);
+    color: rgb(255, 255, 255);
 }
 
-
+table{
+    background-color: white;
+    border-spacing: 0px;
+}
+th{
+    border: 2px solid black;
+    height: 2rem;
+    padding: .5rem;
+    width: 5rem;
+}
+td{
+    border: 2px solid black;
+    height: 2rem;
+    padding: .5rem;
+    width: 5rem;
+}
+.recipeInput{
+    padding: .5rem;
+    width: 75%;
+}
 
 
 /*header styling*/
@@ -66,7 +86,7 @@ p, li{
     height: 2rem;
     margin: 0 auto;
     padding: 1rem;
-    width: 50%;
+    width: 100%;
 }
 .header__title{
     margin: 1rem 2rem;
@@ -207,20 +227,30 @@ p, li{
 /*Admin*/
 
 .admin__actions{
-    background-color: blue;
     display: flex;
     flex-direction: row;
-    margin: 3rem;
+    margin: .5rem;
 }
 .admin__link{
+    background-color: white;
     border: 2px solid black;
-    margin: 0 2rem;
+    border-radius: .5rem;
+    color: black;
+    padding: 1rem;
 }
 .admin__recipes{
     display: flex;
     flex-direction: column;
     margin: 0 2rem;
 }
+.adminTableFunction{
+    color: black;
+    text-decoration: underline;
+}
+.searchForm{
+    width: 100%;
+}
+
 .recipe__listing{
     display: flex;
     flex-direction: row;
