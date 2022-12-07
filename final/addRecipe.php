@@ -15,7 +15,7 @@ $result = mysqli_query($db_connection, $query);
     <div class="recipeCard">
       <img class="detailsFeatured" src="media/fenchfy.jpg" />
       <div class="recipeInfo">
-      <label for="">Image</label> <input class="recipeImage" type="text" name="image">
+      <label for="">Image</label> <input class="recipeImage" type="text" name="image_path">
         <label for="">Title</label> <input class="recipeTitle" type="text" name="title">
         <label for="">Prep Time</label> <input class="recipePrepTime" type="text" name="prepTime">
         <label for="">Rating</label> <input class="recipeRating" type="text" name="rating">

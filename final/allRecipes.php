@@ -19,13 +19,14 @@ include_once __DIR__ .  "/components/header.php";
   $query .= " OR rating LIKE '%{$search}%'";
   $query .= " OR ingredients LIKE '%{$search}%'";
   $query .= " OR steps LIKE '%{$search}%'";
-
   $recipes = mysqli_query($db_connection, $query);
   if ($recipes->num_rows > 0){
     $recipes_results = mysqli_fetch_assoc($recipes);
-    } else{
+    }else{
     $recipes_results = false;
     }
+   /* var_dump ($recipes);
+    die; */
 ?>
   <main>
   <?php include_once __DIR__ ."/components/sidebar.php"?>

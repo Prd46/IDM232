@@ -7,7 +7,8 @@ if (!$_POST) {
 }
 
 
-// Store $_POST data to variables for readability
+// defining values in the edit
+$image_value = sanitize_value($_POST['image_path']);
 $title_value = sanitize_value($_POST['title']);
 $prepTime_value = sanitize_value($_POST['prepTime']);
 $rating_value = sanitize_value($_POST['rating']);
@@ -15,8 +16,8 @@ $ingredients_value = sanitize_value($_POST['ingredients']);
 $steps_value = sanitize_value($_POST['steps']);
 $id_value = sanitize_value($_POST['id']);
 
-// Create a SQL statement to insert the data into the database
-$query = "UPDATE recipes SET title = '{$title_value}', prepTime = '{$prepTime_value}', rating = '{$rating_value}', ingredients = '{$ingredients_value}', steps = '{$steps_value}' WHERE id = {$id_value}";
+// edits the database value for each item
+$query = "UPDATE recipes SET image_path = '{$image_value}', title = '{$title_value}', prepTime = '{$prepTime_value}', rating = '{$rating_value}', ingredients = '{$ingredients_value}', steps = '{$steps_value}' WHERE id = {$id_value}";
 
 // Run the SQL statement
 $result = mysqli_query($db_connection, $query);

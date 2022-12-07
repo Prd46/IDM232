@@ -40,22 +40,20 @@ function project_root()
  *
  * @return string
  */
-function getFormattedDateTime()
+function getFormattedDateTime() //give formatted date for footer
 {
     return  date('Y-m-d H:i:s');
 }
 
-function sanitize_value($value)
+function sanitize_value($value) //prevent malicious inputs
 {
     global $db_connection;
     return mysqli_real_escape_string($db_connection, $value);
 }
 
-function redirect_to($path)
+function redirect_to($path) //redirect
 {
     $full_url = site_url() . $path;
-    // Bluehost doesn't like when you use header() to redirect so we'll use JS instead
-    // header('Location: ' . $full_url);
     echo "<script>window.location = '$full_url';</script>";
     exit;
 }

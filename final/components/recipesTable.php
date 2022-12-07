@@ -29,7 +29,7 @@ if (!isset($recipes)) {
         echo "
           <tr>
             <td>{$recipe['id']}</td>
-            <td><img class='allTableImage' src='{$site_url}/media/{$recipe['image_path']}'></td>
+            <td><img src='{$site_url}/media/{$recipe['image_path']}'></td>
             <td>{$recipe['title']}</td>
             <td>{$recipe['prepTime']}</td>
             <td>{$recipe['rating']}</td>

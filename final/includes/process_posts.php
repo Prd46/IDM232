@@ -7,7 +7,7 @@ if (!$_POST) {
 }
 
 // Store $_POST data to variables for readability
-$image = sanitize_value($_POST['image']);
+$image = sanitize_value($_POST['image_path']);
 $title = sanitize_value($_POST['title']);
 $prepTime = sanitize_value($_POST['prepTime']);
 $rating = sanitize_value($_POST['rating']);
