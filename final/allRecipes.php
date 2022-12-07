@@ -6,7 +6,6 @@ include_once __DIR__ .  "/components/header.php";
 
    ?>
 <?php 
-  $recipes = get_recipes();
   if (isset($_GET['search'])){
     $search = $_GET['search'];
   } else {
@@ -21,9 +20,9 @@ include_once __DIR__ .  "/components/header.php";
   $query .= " OR ingredients LIKE '%{$search}%'";
   $query .= " OR steps LIKE '%{$search}%'";
 
-  $results = mysqli_query($db_connection, $query);
-  if ($results->num_rows > 0){
-    $recipes_results = mysqli_fetch_assoc($results);
+  $recipes = mysqli_query($db_connection, $query);
+  if ($recipes->num_rows > 0){
+    $recipes_results = mysqli_fetch_assoc($recipes);
     } else{
     $recipes_results = false;
     }
@@ -37,29 +36,42 @@ include_once __DIR__ .  "/components/header.php";
           }         
 ?>
 <div class="nonSidebar">
- <form action="<?php echo site_url(); ?>/allRecipes.php" method="GET">
-            <input type="search" placeholder="Find Recipe" />
-            <p>Searching for: "<?php echo $search; ?>"</p>
-            <?php if(!$recipes_results){
-              echo '<p>No results found.</p>';
-            }
-          if ($recipes_results){
-                // If we have results, show them
-        while ($recipes_results = mysqli_fetch_assoc($results)) {
-            echo '<div class="searchResult">';
-            echo '<h2>' . $recipes_results['title'] . ' ' . $recipes_results['prepTime'] . ' ' . $recipes_results['rating'] .'</h2>';
-            echo '</div>';
-        }
 
-          }
-            ?>
-            <button type="submit">Submit</button>
+        <form action="<?php echo site_url(); ?>/allRecipes.php" method="GET">
+          <input type="text" name="search" id="search" placeholder="Search"
+            value="<?php echo $search; ?>">
+          <button type="submit">Search</button>
         </form>
-  <div class="admin__main">
+        <?php if ($search) {
+          echo '<h2>You searched for "' . $search . '"</h2>';
+        } ?>
+        <?php
+        // If no results, echo no results
+        if (!$recipes_results) {
+            echo '<p>No results found</p>';
+        }
+?>
+
+<?php
+// If error query param exist, show error message
+if (isset($_GET['error'])) {
+  echo '<p class="text-red-500">' . $_GET['error'] . '</p>';
+}?>
+
+<div class="admin__main">
             <div class="admin__actions">
                 <a href="<?php echo site_url(); ?>/addRecipe.php" class="admin__link">Add</a>
             </div>
-            <?php include __DIR__ . '/components/recipesTable.php'; ?>
-        </div>
+  <div class=searchResultTable>
+
+  <?php 
+  if ($recipes_results) {
+  include __DIR__ . '/components/recipesTable.php'; 
+  };
+  ?>
+<?php
+    // If we have results, show them
+?>
+</div>
   </main>
   <?php include "components/footer.php" ?>

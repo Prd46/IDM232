@@ -17,6 +17,7 @@ $document_title = $page_name . ' | ' . $site_name;
     <title><?php echo $document_title?></title>
     <link rel="stylesheet" href= "<?php echo site_url(); ?>/css/normalize.css">
     <link rel="stylesheet" href= "<?php echo site_url(); ?>/css/stylesheet.css">
+    <link rel="icon" href="<?php echo site_url(); ?>/media/favicon.png">
 </head>
 <body>
     <header>

@@ -7,12 +7,12 @@ if (!$_POST) {
 }
 
 // Store $_POST data to variables for readability
-$image = $_POST['image'];
-$title = $_POST['title'];
-$prepTime = $_POST['prepTime'];
-$rating = $_POST['rating'];
-$ingredients = $_POST['ingredients'];
-$steps = $_POST['steps'];
+$image = sanitize_value($_POST['image']);
+$title = sanitize_value($_POST['title']);
+$prepTime = sanitize_value($_POST['prepTime']);
+$rating = sanitize_value($_POST['rating']);
+$ingredients = sanitize_value($_POST['ingredients']);
+$steps = sanitize_value($_POST['steps']);
 
 $result = add_recipe($image, $title, $prepTime, $rating, $ingredients, $steps);
 

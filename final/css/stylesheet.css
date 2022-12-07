@@ -250,6 +250,10 @@ td{
 .searchForm{
     width: 100%;
 }
+.allTableImage{
+    overflow: hidden;
+    width: 2rem;
+}
 
 .recipe__listing{
     display: flex;
