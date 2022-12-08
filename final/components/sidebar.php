@@ -1,4 +1,4 @@
-<div class="container cont__main">
+<div class="container cont__main"> <!--Side bar is non functional, only for show-->
             <div class="main__categories">
                     <h2>Filter by type</h2>
                 <div class="main__categories__list">

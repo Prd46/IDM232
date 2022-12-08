@@ -8,7 +8,7 @@
    <h2>For all the newest and freshest recipes.</h2>
    <!--Load 3 random recipes, if you can -->
    <div class="indexButton">
-      <a href="<?php echo site_url(); ?>/recipes.php" class="buttonText">Explore</a>
+      <a href="<?php echo site_url(); ?>/search.php" class="buttonText">Explore</a>
    </div>
     </main>
 <?php include "components/footer.php" ?>

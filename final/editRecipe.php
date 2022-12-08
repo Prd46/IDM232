@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
 <main>
     <form action="<?php echo site_url(); ?>/includes/edit_post.php" method="POST">
     <div class="recipeCard">
-      <img class="detailsFeatured" src="media/fenchfy.jpg" />
+      <img class="detailsFeatured" src="<?php echo site_url(); ?>/media/<?php echo $recipe['image_path']?>.jpg" />
       <div class="recipeInfo">
       <label for="">Image</label> 
         <input class="recipeInput" type="text" name="image_path" value="<?php echo $recipe['image_path']?>">

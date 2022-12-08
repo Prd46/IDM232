@@ -1,36 +1,27 @@
 <?php
 if (!isset($recipes)) {
-    echo '$users variable is not defined. Please check the code.';
+    echo '$recipes variable is not defined. Please check the code.';
 }
 ?>
-<table class="min-w-full divide-y divide-gray-300">
-  <thead class="bg-gray-50">
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Image</th>
-      <th scope="col">Title</th>
-      <th scope="col">Prep Time</th>
-      <th scope="col">Rating</th>
-      <th scope="col">Ingredients</th>
-      <th scope="col">Steps</th>
-    </tr>
-  </thead>
-  <tbody class="divide-y divide-gray-200 bg-white">
-    <?php
+<div class="recipesContainer">
+<?php
     // Cant combine functions with string so we have to assign the function to a variable here.
+    //Make a div with the image and the text. Make text relative, show title, prep time, rating. 
+    //Put another div out here to organize posts. 
     $site_url = site_url();
     while ($recipe = mysqli_fetch_array($recipes)) {
-        echo "
-          <tr>
-            <td>{$recipe['id']}</td>
-            <td>{$recipe['image_path']}</td>
-            <td>{$recipe['title']}</td>
-            <td>{$recipe['prepTime']}</td>
-            <td>{$recipe['rating']}</td>
-            <td>{$recipe['ingredients']}</td>
-            <td>{$recipe['steps']}</td>
-          </tr>";
-    }
+      echo "
+      <a href='{$site_url}/details.php?id={$recipe['id']}'>
+      <div class='imageContainer'>
+      <img src='{$site_url}/media/{$recipe['image_path']}.jpg' class='tableImage2' alt='Recipe Image'>
+        <div class='imageContainerText'>
+          <p class='postText'>{$recipe['title']}</>
+          <p class='postText'>{$recipe['prepTime']}</>
+          <p class='postText'>{$recipe['rating']}</>
+        </div>
+      </div>
+      </a>
+      ";
+    } //Wrapped Ingredients and Steps in divs to shrink them down
 ?>
-  </tbody>
-</table>
+</div>

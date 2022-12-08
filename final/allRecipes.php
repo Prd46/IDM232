@@ -13,23 +13,21 @@ include_once __DIR__ .  "/components/header.php";
   }
 
   $query = 'SELECT *';
-  $query .= 'FROM RECIPES';
+  $query .= 'FROM recipes';
   $query .= " WHERE title LIKE '%{$search}%'";
   $query .= " OR prepTime LIKE '%{$search}%'";
   $query .= " OR rating LIKE '%{$search}%'";
   $query .= " OR ingredients LIKE '%{$search}%'";
   $query .= " OR steps LIKE '%{$search}%'";
+  $query .= " ORDER BY title";
   $recipes = mysqli_query($db_connection, $query);
-  if ($recipes->num_rows > 0){
-    $recipes_results = mysqli_fetch_assoc($recipes);
-    }else{
-    $recipes_results = false;
+  if ($recipes->num_rows == 0){
+    $recipes = false;
     }
    /* var_dump ($recipes);
     die; */
 ?>
   <main>
-  <?php include_once __DIR__ ."/components/sidebar.php"?>
   <?php
         // If error query param exist, show error message
           if (isset($_GET['error'])) {
@@ -46,9 +44,13 @@ include_once __DIR__ .  "/components/header.php";
         <?php if ($search) {
           echo '<h2>You searched for "' . $search . '"</h2>';
         } ?>
+         <?php  if($recipes){
+        echo "<p>Recipe count: {$recipes->num_rows}";}
+        
+        ?>
         <?php
         // If no results, echo no results
-        if (!$recipes_results) {
+        if (!$recipes) {
             echo '<p>No results found</p>';
         }
 ?>
@@ -66,8 +68,8 @@ if (isset($_GET['error'])) {
   <div class=searchResultTable>
 
   <?php 
-  if ($recipes_results) {
-  include __DIR__ . '/components/recipesTable.php'; 
+ if ($recipes) {
+  include_once __DIR__ . '/components/recipesTable.php'; 
   };
   ?>
 <?php

@@ -1,6 +1,6 @@
 <?php
 if (!isset($recipes)) {
-    echo '$users variable is not defined. Please check the code.';
+    echo '$recipes variable is not defined. Please check the code.';
 }
 ?>
 <table class="min-w-full divide-y divide-gray-300">
@@ -20,7 +20,7 @@ if (!isset($recipes)) {
         <span class="sr-only">Delete</span>
       </th>
     </tr>
-  </thead>
+  </thead> 
   <tbody class="divide-y divide-gray-200 bg-white">
     <?php
     // Cant combine functions with string so we have to assign the function to a variable here.
@@ -29,20 +29,33 @@ if (!isset($recipes)) {
         echo "
           <tr>
             <td>{$recipe['id']}</td>
-            <td><img src='{$site_url}/media/{$recipe['image_path']}'></td>
+            <td class='tableImage'><img src='{$site_url}/media/{$recipe['image_path']}.jpg' class='tableImage' alt='Recipe Image'></td>
             <td>{$recipe['title']}</td>
             <td>{$recipe['prepTime']}</td>
             <td>{$recipe['rating']}</td>
-            <td>{$recipe['ingredients']}</td>
-            <td>{$recipe['steps']}</td>
+            <td>
+            <div class='outerTd'>
+              <div class='innerTd'>
+                {$recipe['ingredients']}
+              </div>
+            </div>
+            </td>
+            <td>
+            <div class='outerTd'>
+              <div class='innerTd'>
+                {$recipe['steps']}
+              </div>
+            </div>
+            </td>
             <td>
               <a href='{$site_url}/editRecipe.php?id={$recipe['id']}' class='adminTableFunction'>Edit</a>
+              
             </td>
             <td>
             <a href='{$site_url}/includes/deleteRecipe.php?id={$recipe['id']}' class='adminTableFunction'>Delete</a>
             </td>
           </tr>";
-    }
+    } //Wrapped Ingredients and Steps in divs to shrink them down
 ?>
   </tbody>
 </table>
