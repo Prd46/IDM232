@@ -1,39 +1,42 @@
 <?php 
    include_once __DIR__ .'/connection.php'; 
-  $page_name = 'Recipe Details'; // Gives a value if page name is missing
+  $page_name = 'Edit Recipe'; // Gives a value if page name is missing
   include "components/header.php" 
 ?>
-  <main>
+<?php
+// get users data from database
+$query = "SELECT * FROM recipes WHERE id = {$_GET['id']}";
+$result = mysqli_query($db_connection, $query);
+if ($result->num_rows > 0) {
+    // Get row from results and assign to $user variable;
+    $recipe = mysqli_fetch_assoc($result);
+} else {
+    $error_message = 'User does not exist';
+    // redirect_to('/admin/users?error=' . $error_message);
+}
+
+?>
+<main>
+  <a class="returnLink" href="<?php echo site_url(); ?>/search.php">← Return</a>
     <div class="recipeCard">
-      <img class="detailsFeatured" src="media/fenchfy.jpg" />
+      <img class="detailsFeatured" src="<?php echo site_url(); ?>/media/<?php echo $recipe['image_path']?>.jpg" />
       <div class="recipeInfo">
-        <h3>Crispy French Fries</h3>
-        <p>Prep time: 20 minutes</p>
-        <p>Rating: 4.2 stars</p>
+        <p class="recipeLine"><?php echo $recipe['title']?></p>
+        <p class="recipeLine"><?php echo $recipe['prepTime']?></p>
+        <p class="recipeLine"><?php echo $recipe['rating']?></p>
       </div>
     </div>
 
     <div class="recipeIngredients">
-      <h3>Ingredients</h3>
-        <ul>
-          <li>Ingredient</li>
-          <li>Ingredient</li>
-          <li>Ingredient</li>
-          <li>Ingredient</li>
-          <li>Ingredient</li>
-        </ul>
+        <h2 class="recipeSectionTitle">Ingredients</h2>
+        <div class="recipeIngredientsContent"><?php echo $recipe['ingredients']?></div>
     </div>
 
-  <div class="recipeInstructions">
-    <h3>Steps</h3>
-      <ol>
-        <li>Step</li>
-        <li>Step</li>
-        <li>Step</li>
-        <li>Step</li>
-        <li>Step</li>
-      </ol>
+    <div class="recipeInstructions">
+        <h2 class="recipeSectionTitle">Steps</h2>
+        <div class="recipeIngredientsContent"><?php echo $recipe['steps']?></div>
     </div>
-
+    <input type="hidden" name="id" value="<?php echo $recipe['id']?>">
+</form>
   </main>
 <?php include "components/footer.php" ?>

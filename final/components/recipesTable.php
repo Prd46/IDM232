@@ -28,11 +28,11 @@ if (!isset($recipes)) {
     while ($recipe = mysqli_fetch_array($recipes)) {
         echo "
           <tr>
-            <td>{$recipe['id']}</td>
+            <td class='smallCol'>{$recipe['id']}</td>
             <td class='tableImage'><img src='{$site_url}/media/{$recipe['image_path']}.jpg' class='tableImage' alt='Recipe Image'></td>
             <td>{$recipe['title']}</td>
-            <td>{$recipe['prepTime']}</td>
-            <td>{$recipe['rating']}</td>
+            <td class='smallCol'>{$recipe['prepTime']}</td>
+            <td class='smallCol'>{$recipe['rating']}</td>
             <td>
             <div class='outerTd'>
               <div class='innerTd'>

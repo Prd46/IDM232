@@ -336,6 +336,7 @@ td{
 .imageContainer{
     align-items: center;
     display: flex;
+    filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.303));
     justify-content: center;
     margin: 0;
     overflow: hidden;
@@ -362,6 +363,9 @@ td{
 .recipesContainer{
     display: flex;
     flex-wrap: wrap;
+}
+.smallCol{
+    width: 6rem;
 }
 
 .postText{
