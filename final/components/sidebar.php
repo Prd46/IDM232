@@ -1,51 +1,36 @@
 <div class="container cont__main"> <!--Side bar is non functional, only for show-->
             <div class="main__categories">
-                    <h2>Filter by type</h2>
+                    <h2>Filters</h2>
                 <div class="main__categories__list">
                     <div class="category">
-                        <input type="checkbox"><p class="category__title">American</p>
+                        <a href="<?php echo site_url(); ?>/search.php?search=Beef" class="category__title">Beef</a>
                     </div>
                     <div class="category">
-                        <input type="checkbox"><p class="category__title">Cajun</p>
+                        <a href="<?php echo site_url(); ?>/search.php?search=Chicken" class="category__title">Chicken</a>
                     </div>
                     <div class="category">
-                        <input type="checkbox"><p class="category__title">Carribean</p>
+                        <a href="<?php echo site_url(); ?>/search.php?search=Pork" class="category__title">Pork</a>
                     </div>
                     <div class="category">
-                        <input type="checkbox"><p class="category__title">Chinese</p>
+                        <a href="<?php echo site_url(); ?>/search.php?search=Fish" class="category__title">Fish</a>
                     </div>
                     <div class="category">
-                        <input type="checkbox"><p class="category__title">French</p>
+                        <a href="<?php echo site_url(); ?>/search.php?search=Pasta" class="category__title">Pasta</a>
                     </div>
                     <div class="category">
-                        <input type="checkbox"><p class="category__title">German</p>
+                        <a href="<?php echo site_url(); ?>/search.php?search=Rice" class="category__title">Rice</a>
                     </div>
                     <div class="category">
-                        <input type="checkbox"><p class="category__title">Greek</p>
+                        <a href="<?php echo site_url(); ?>/search.php?search=Salad" class="category__title">Salad</a>
                     </div>
                     <div class="category">
-                        <input type="checkbox"><p class="category__title">Indian</p>
+                        <a href="<?php echo site_url(); ?>/search.php?search=Sandwich" class="category__title">Sandwich</a>
                     </div>
                     <div class="category">
-                        <input type="checkbox"><p class="category__title">Italian</p>
+                        <a href="<?php echo site_url(); ?>/search.php?search=Potatoes" class="category__title">Potatoes</a>
                     </div>
                     <div class="category">
-                        <input type="checkbox"><p class="category__title">Japanese</p>
-                    </div>
-                    <div class="category">
-                        <input type="checkbox"><p class="category__title">Mediterranean</p>
-                    </div>
-                    <div class="category">
-                        <input type="checkbox"><p class="category__title">Mexican</p>
-                    </div>
-                    <div class="category">
-                        <input type="checkbox"><p class="category__title">Russian</p>
-                    </div>
-                    <div class="category">
-                        <input type="checkbox"><p class="category__title">Spanish</p>
-                    </div>
-                    <div class="category">
-                        <input type="checkbox"><p class="category__title">Thai</p>
+                        <a href="<?php echo site_url(); ?>/search.php?search=Broccoli" class="category__title">Broccoli</a>
                     </div>
                 </div>
             </div>

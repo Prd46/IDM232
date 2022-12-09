@@ -21,9 +21,9 @@ if ($result->num_rows > 0) {
     <div class="recipeCard">
       <img class="detailsFeatured" src="<?php echo site_url(); ?>/media/<?php echo $recipe['image_path']?>.jpg" />
       <div class="recipeInfo">
-        <p class="recipeLine"><?php echo $recipe['title']?></p>
-        <p class="recipeLine"><?php echo $recipe['prepTime']?></p>
-        <p class="recipeLine"><?php echo $recipe['rating']?></p>
+        <h2 class="recipeLine"><?php echo $recipe['title']?></h2>
+        <h2 class="recipeLine"><?php echo $recipe['prepTime']?></h2>
+        <h2 class="recipeLine"><?php echo $recipe['rating']?></h2>
       </div>
     </div>
 

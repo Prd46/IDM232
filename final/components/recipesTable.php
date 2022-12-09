@@ -6,13 +6,11 @@ if (!isset($recipes)) {
 <table class="min-w-full divide-y divide-gray-300">
   <thead class="bg-gray-50">
     <tr>
-      <th scope="col">ID</th>
+      <th scope="col" class="smallCol">ID</th>
       <th scope="col">Image</th>
       <th scope="col">Title</th>
-      <th scope="col">Prep Time</th>
-      <th scope="col">Rating</th>
-      <th scope="col">Ingredients</th>
-      <th scope="col">Steps</th>
+      <th scope="col" class="smallCol">Prep Time</th>
+      <th scope="col" class="smallCol">Steps</th>
       <th scope="col">
         <span class="sr-only">Edit</span>
       </th>
@@ -33,20 +31,7 @@ if (!isset($recipes)) {
             <td>{$recipe['title']}</td>
             <td class='smallCol'>{$recipe['prepTime']}</td>
             <td class='smallCol'>{$recipe['rating']}</td>
-            <td>
-            <div class='outerTd'>
-              <div class='innerTd'>
-                {$recipe['ingredients']}
-              </div>
-            </div>
-            </td>
-            <td>
-            <div class='outerTd'>
-              <div class='innerTd'>
-                {$recipe['steps']}
-              </div>
-            </div>
-            </td>
+
             <td>
               <a href='{$site_url}/editRecipe.php?id={$recipe['id']}' class='adminTableFunction'>Edit</a>
               

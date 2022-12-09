@@ -45,7 +45,7 @@ if ($result->num_rows > 0) {
                 <textarea class="recipeSteps js-tinymce" name="steps" id="" cols="30"
                   rows="10"><?php echo $recipe['steps']?></textarea>
     </div>
-    <input type="submit" value="submit">
+    <input type="submit" value="Submit" class="editSubmit">
     <input type="hidden" name="id" value="<?php echo $recipe['id']?>">
 </form>
   </main>

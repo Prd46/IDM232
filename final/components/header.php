@@ -26,9 +26,6 @@ $document_title = $page_name . ' | ' . $site_name;
             <div class="header__mobile">
             <a href="<?php echo site_url(); ?>/index.php"><h1 class="header__title">Progrecipes</h1></a>
             </div>
-        <form action="<?php echo site_url(); ?>/search.php" class="searchForm">
-            <input type="search" class="header__search" placeholder="What are you hungry for?" />
-        </form>
             <?php 
     $main_navigation=[
         [

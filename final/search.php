@@ -36,10 +36,9 @@ include_once __DIR__ .  "/components/header.php";
 ?>
 <div class="nonSidebar">
 
-        <form action="<?php echo site_url(); ?>/search.php" method="GET">
-          <input type="text" name="search" id="search" placeholder="Search"
+        <form action="<?php echo site_url(); ?>/search.php" method="GET" class="searchForm">
+          <input type="text" class="header__search" name="search" id="search" placeholder="What are you hungry for?"
             value="<?php echo $search; ?>">
-          <button type="submit">Search</button>
         </form>
         <?php if ($search) {
           echo '<h2>You searched for "' . $search . '"</h2>';

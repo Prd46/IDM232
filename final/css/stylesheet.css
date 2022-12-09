@@ -40,6 +40,13 @@ footer{
     position: absolute;
     width: 100%;
 }
+.nonSidebar{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    width: 100%;
+}
 .cont__head{
     align-items: center;
     background-image: linear-gradient(180deg, #0179AD, #01628c);
@@ -99,14 +106,34 @@ td{
     width: 75%;
 }
 
+/*Index elements*/
+.indexText{
+    text-align: center;
+}
+.main__postArea{
+    display: flex;
+    justify-content: center;
+}
+.main__postReel{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    justify-items: center;
+    margin: 0 1rem;
+    max-width: 80%;
+}
+.leadText{
+    font-size: 3rem;
+}
 
 /*header styling*/
 .header__search{
     border-radius: 2rem;
+    display: flex;
+    justify-content: center;
     height: 2rem;
     margin: 0 auto;
-    padding: 1rem;
-    width: 100%;
+    padding: .5rem 1rem;
+    width: 70%;
 }
 .header__title{
     margin: 1rem 2rem;
@@ -163,44 +190,18 @@ td{
     max-height: 2rem;
 }
 .category__title{
+    color: black;
     margin: 0 .5rem;
 }
-
-
-/*Reels*/
-.main__inventory{
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding: 0 1rem;
-}
-.main__contentReel{
-    display: flex;
-}
-.post{
-    margin: 0 .25rem;
-}
-.arrow{
-    height: 4.375rem;
-    width: 4.375rem;
-}
-.post{
-    min-height: 9.375rem;
-    min-width: 9.375rem;
-    max-width: 9.375rem;
-    overflow: hidden;
-}
-.featured{
-    min-height: 9.375rem;
-    max-width: 9.375rem;
-    width: auto;
-    height: auto;
+.category__title:hover{
+    text-decoration: underline;
 }
 
 
 /*Recipe details*/
 .detailsFeatured{
     height: 100%;
+    margin: auto 0;
     width: 50%;
 }
 .recipeCard{
@@ -233,6 +234,19 @@ td{
     justify-items: center;
     width: 100%;
 }
+.recipeLine{
+    padding: .5rem;
+    text-align: center;
+}
+.returnLink{
+    background-image: linear-gradient(180deg, #0179AD, #01628c);
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    margin: 1rem auto;
+    padding: .5rem;
+    width: 5rem;
+}
 
 /*Results*/
 .results{
@@ -243,7 +257,6 @@ td{
 .search__results{
     margin: 0 auto;
 }
-
 /*Admin*/
 
 .admin__actions{
@@ -314,13 +327,22 @@ td{
     padding: 1rem;
     
 }
-
+.editSubmit{
+    background-image: linear-gradient(180deg, #0179AD, #01628c); ;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto;
+    width: 10rem;
+}
 .searchResultTable{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    overflow-x: scroll;
 }
 .tableImage{
+    margin: 0 auto;
     overflow: hidden;
     padding: 0;
     width: 8rem;
@@ -353,7 +375,7 @@ td{
     position: absolute;
     text-shadow: 5px 5px 5px black;
     transition: all .3s ease-out;
-    width: 12rem;
+    width: 11.5rem;
     z-index: 100;
 }
 .imageContainer:hover .imageContainerText{
@@ -363,6 +385,7 @@ td{
 .recipesContainer{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .smallCol{
     width: 6rem;
@@ -371,23 +394,16 @@ td{
 .postText{
     color: white;
 }
+
+/*Reel*/
+.featuredReelImage{
+    width: 20rem;
+}
+
+
 @media screen and (max-width: 750px){
     .cont__head{
         flex-direction: column;
-    }
-    .header__search{
-        width: 100%;
-        margin: 0 0 1rem 0;
-    }
-    .header__button{
-        display: none;
-    }
-    .header__mobile{
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
     }
     .header__menuButton{
         display: flex;
@@ -406,9 +422,39 @@ td{
 
 @media screen and (max-width: 650px){
     .main__categories{
-        display: none;
+        position: relative;
+    }
+    .main__categories__open{
+        background-color: white;
+        height: 2rem;
+        width: 2rem;
     }
     footer{
         margin: 2rem 0 0 0;
+    }
+    .recipeCard{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .recipeLine{
+        margin: .5rem 0;
+        padding: 0;
+    }
+    .smallCol{
+        display: none;
+    }
+    .nonSidebar{
+        margin: 1rem 0;
+    }
+}
+@media screen and (max-width: 580px){
+    .main__categories{
+        display: none;
+    }
+}
+@media screen and (max-width: 360px){
+    .tableImage{
+       width: 4rem;
     }
 }
