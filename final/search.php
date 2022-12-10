@@ -10,7 +10,7 @@ include_once __DIR__ .  "/components/header.php";
   } else {
     $search = '';
   }
-
+//Search function looks for words in all fields. 
   $query = 'SELECT *';
   $query .= 'FROM recipes';
   $query .= " WHERE title LIKE '%{$search}%'";
@@ -23,8 +23,6 @@ include_once __DIR__ .  "/components/header.php";
   if ($recipes->num_rows == 0){
     $recipes = false;
     }
-   /* var_dump ($recipes);
-    die; */
 ?>
   <main>
   <?php include_once __DIR__ ."/components/sidebar.php"?>
@@ -34,12 +32,19 @@ include_once __DIR__ .  "/components/header.php";
               echo '<p>' . $_GET['error'] . '</p>';
           }         
 ?>
+
 <div class="nonSidebar">
 
         <form action="<?php echo site_url(); ?>/search.php" method="GET" class="searchForm">
-          <input type="text" class="header__search" name="search" id="search" placeholder="What are you hungry for?"
+          <input 
+            type="text" 
+            class="header__search" 
+            name="search" 
+            id="search" 
+            placeholder="What are you hungry for?"
             value="<?php echo $search; ?>">
         </form>
+        <!--Structured like the admin search message, but does not list total count-->
         <?php if ($search) {
           echo '<h2>You searched for "' . $search . '"</h2>';
         } ?>

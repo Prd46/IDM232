@@ -5,9 +5,7 @@ if (!isset($recipes)) {
 ?>
 <div class="recipesContainer">
 <?php
-    // Cant combine functions with string so we have to assign the function to a variable here.
-    //Make a div with the image and the text. Make text relative, show title, prep time, rating. 
-    //Put another div out here to organize posts. 
+    //uses the same flow as the recipe table, but styled to be images with text on hover
     $site_url = site_url();
     while ($recipe = mysqli_fetch_array($recipes)) {
       echo "
@@ -22,6 +20,6 @@ if (!isset($recipes)) {
       </div>
       </a>
       ";
-    } //Wrapped Ingredients and Steps in divs to shrink them down
+    } //Removed ingredients and steps to save space
 ?>
 </div>

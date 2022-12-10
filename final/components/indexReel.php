@@ -1,8 +1,5 @@
 <?php
-/*SELECT QUESTION
-FROM Questions
-ORDER BY RAND()  
-LIMIT 1; */
+//Displays 6 random recipes to choose from whenever you open the site
 $query = 'SELECT *';
 $query .= 'FROM recipes';
 $query .= " ORDER BY RAND()";

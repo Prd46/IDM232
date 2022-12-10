@@ -1,8 +1,0 @@
-<?php //USED TO STORE ALL SENSITIVE INFORMATION.
-
-$APP_CONFIG = [
-
-'environment' => 'PROD VALUE'
-]
-
-?>

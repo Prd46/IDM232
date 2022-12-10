@@ -40,7 +40,7 @@ if (!isset($recipes)) {
             <a href='{$site_url}/includes/deleteRecipe.php?id={$recipe['id']}' class='adminTableFunction'>Delete</a>
             </td>
           </tr>";
-    } //Wrapped Ingredients and Steps in divs to shrink them down
+    } //Removed ingredients and steps to save space
 ?>
   </tbody>
 </table>

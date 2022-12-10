@@ -35,15 +35,27 @@ include_once __DIR__ .  "/components/header.php";
           }         
 ?>
 <div class="nonSidebar">
-
+          <!--Search Function-->
         <form action="<?php echo site_url(); ?>/allRecipes.php" method="GET" class="searchForm">
-          <input type="text" name="search" id="search" placeholder="Search"
-          class="header__search" value="<?php echo $search; ?>">
+          <input 
+            type="text" 
+            name="search" 
+            id="search" 
+            placeholder="Search"
+            class="header__search" 
+            value="<?php echo $search; ?>">
         </form>
-        <?php if ($search) {
+
+        <?php 
+        //Text displays only after search has gone through.
+        if ($search) {
           echo '<h2>You searched for "' . $search . '"</h2>';
         } ?>
-         <?php  if($recipes){
+
+
+         <?php  
+         //Displays the number of results in the table
+         if($recipes){
         echo "<p>Recipe count: {$recipes->num_rows}";}
         
         ?>
@@ -67,13 +79,11 @@ if (isset($_GET['error'])) {
   <div class=searchResultTable>
 
   <?php 
+  //adds Admin table format and loops through recipe results.
  if ($recipes) {
   include_once __DIR__ . '/components/recipesTable.php'; 
   };
   ?>
-<?php
-    // If we have results, show them
-?>
 </div>
 </div>
 </div>

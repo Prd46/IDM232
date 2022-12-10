@@ -17,6 +17,7 @@ if ($result->num_rows > 0) {
 
 ?>
 <main>
+  <!--Follows the same format as the edit recipe page, but with text instead of inputs-->
   <a class="returnLink" href="<?php echo site_url(); ?>/search.php">← Return</a>
     <div class="recipeCard">
       <img class="detailsFeatured" alt="Featured Image" src="<?php echo site_url(); ?>/media/<?php echo $recipe['image_path']?>.jpg">
