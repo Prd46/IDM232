@@ -17,7 +17,6 @@ if ($result->num_rows > 0) {
 
 ?>
 <main>
-  <!--Follows the same format as the add recipe page, but with pre-populated fields-->
     <form action="<?php echo site_url(); ?>/includes/edit_post.php" method="POST">
     <div class="recipeCard">
       <img class="detailsFeatured" alt="Featured Image" src="<?php echo site_url(); ?>/media/<?php echo $recipe['image_path']?>.jpg">

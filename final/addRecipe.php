@@ -10,7 +10,7 @@ $query = 'SELECT * FROM recipes';
 $result = mysqli_query($db_connection, $query);
 
 ?>
-<main> 
+<main>
     <form action="includes/process_posts.php" method="POST">
     <div class="recipeCard">
       <div class="recipeInfo">
@@ -20,7 +20,7 @@ $result = mysqli_query($db_connection, $query);
         <label for="rating">Rating</label> <input class="recipeInput" type="text" id="rating" name="rating">
       </div>
     </div>
-<!--Recipe Ingredients and Instructions use wyziwig fields-->
+
     <div class="recipeIngredients">
         <label for="ingredients">Ingredients</label>
                 <br>

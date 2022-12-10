@@ -151,6 +151,22 @@ td{
 .header__button:hover{
     color: rgb(255, 200, 99);
 }
+.header__menuButton{
+    display: none;
+}
+.header__mobileModal{
+    background-color: white;
+    display: none;
+}
+.modal__button{
+    border: 1px solid rgb(71, 71, 71);
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+.open{
+    display: none;
+}
 
 
 /*Category box*/
@@ -270,7 +286,6 @@ td{
 }
 
 
-/*Recipes*/
 .recipe__listing{
     display: flex;
     flex-direction: row;
@@ -386,7 +401,6 @@ td{
     width: 20rem;
 }
 
-/*Responsive fixes*/
 
 @media screen and (max-width: 750px){
     .cont__head{

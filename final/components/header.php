@@ -43,4 +43,9 @@ $document_title = $page_name . ' | ' . $site_name;
             }
             ?>
         </div>
+        <div class="header__mobileModal">
+            <div class="modal__button">Recipes</div>
+            <div class="modal__button">Filters</div>
+            <div class="modal__button">Admin</div>
+        </div>
     </header>

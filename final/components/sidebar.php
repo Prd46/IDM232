@@ -1,4 +1,4 @@
-<div class="container cont__main"> <!--Filters apply on click, redirect to the same page as if it was searched-->
+<div class="container cont__main"> <!--Side bar is non functional, only for show-->
             <div class="main__categories">
                     <h2>Filters</h2>
                 <div class="main__categories__list">
