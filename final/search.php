@@ -1,6 +1,6 @@
 <?php 
 include_once __DIR__ . '/connection.php';
-$page_name = 'All Recipes'; // Gives a value if page name is missing
+$page_name = 'Recipes'; // Gives a value if page name is missing
 include_once __DIR__ .  "/components/header.php";
 
    ?>
@@ -65,5 +65,7 @@ if (isset($_GET['error'])) {
 <?php
     // If we have results, show them
 ?>
+</div>
+</div>
   </main>
   <?php include "components/footer.php" ?>

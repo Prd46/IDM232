@@ -75,5 +75,7 @@ if (isset($_GET['error'])) {
     // If we have results, show them
 ?>
 </div>
+</div>
+</div>
   </main>
   <?php include "components/footer.php" ?>

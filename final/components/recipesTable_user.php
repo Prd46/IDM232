@@ -15,9 +15,9 @@ if (!isset($recipes)) {
       <div class='imageContainer'>
       <img src='{$site_url}/media/{$recipe['image_path']}.jpg' class='tableImage2' alt='Recipe Image'>
         <div class='imageContainerText'>
-          <p class='postText'>{$recipe['title']}</>
-          <p class='postText'>{$recipe['prepTime']}</>
-          <p class='postText'>{$recipe['rating']}</>
+          <p class='postText'>{$recipe['title']}</p>
+          <p class='postText'>{$recipe['prepTime']}</p>
+          <p class='postText'>{$recipe['rating']}</p>
         </div>
       </div>
       </a>

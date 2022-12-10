@@ -14,27 +14,27 @@ $result = mysqli_query($db_connection, $query);
     <form action="includes/process_posts.php" method="POST">
     <div class="recipeCard">
       <div class="recipeInfo">
-      <label for="">Image</label> <input class="recipeInput" type="text" name="image_path">
-        <label for="">Title</label> <input class="recipeInput" type="text" name="title">
-        <label for="">Prep Time</label> <input class="recipeInput" type="text" name="prepTime">
-        <label for="">Rating</label> <input class="recipeInput" type="text" name="rating">
+      <label for="image_path">Image</label> <input class="recipeInput" type="text" id="image_path" name="image_path">
+        <label for="title">Title</label> <input class="recipeInput" type="text" id="title" name="title">
+        <label for="prepTime">Prep Time</label> <input class="recipeInput" type="text" id="prepTime" name="prepTime">
+        <label for="rating">Rating</label> <input class="recipeInput" type="text" id="rating" name="rating">
       </div>
     </div>
 
     <div class="recipeIngredients">
-        <label for="">Ingredients</label>
+        <label for="ingredients">Ingredients</label>
                 <br>
-                <textarea class="recipeIngredients js-tinymce" name="ingredients" id="" cols="30"
+                <textarea class="recipeIngredients js-tinymce" name="ingredients" id="ingredients" cols="30"
                   rows="10"></textarea>
     </div>
 
     <div class="recipeInstructions">
-        <label for="">Steps</label>
+        <label for="steps">Steps</label>
                 <br>
-                <textarea class="recipeSteps js-tinymce" name="steps" id="" cols="30"
+                <textarea class="recipeSteps js-tinymce" name="steps" id="steps" cols="30"
                   rows="10"></textarea>
     </div>
-    <input type="submit" value="submit">
+    <input type="submit" value="submit" class="editSubmit">
 </form>
   </main>
 <?php include "components/footer.php" ?>

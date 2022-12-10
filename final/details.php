@@ -1,6 +1,6 @@
 <?php 
    include_once __DIR__ .'/connection.php'; 
-  $page_name = 'Edit Recipe'; // Gives a value if page name is missing
+  $page_name = 'Recipe Details'; // Gives a value if page name is missing
   include "components/header.php" 
 ?>
 <?php
@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
 <main>
   <a class="returnLink" href="<?php echo site_url(); ?>/search.php">← Return</a>
     <div class="recipeCard">
-      <img class="detailsFeatured" src="<?php echo site_url(); ?>/media/<?php echo $recipe['image_path']?>.jpg" />
+      <img class="detailsFeatured" alt="Featured Image" src="<?php echo site_url(); ?>/media/<?php echo $recipe['image_path']?>.jpg">
       <div class="recipeInfo">
         <h2 class="recipeLine"><?php echo $recipe['title']?></h2>
         <h2 class="recipeLine"><?php echo $recipe['prepTime']?></h2>
@@ -37,6 +37,5 @@ if ($result->num_rows > 0) {
         <div class="recipeIngredientsContent"><?php echo $recipe['steps']?></div>
     </div>
     <input type="hidden" name="id" value="<?php echo $recipe['id']?>">
-</form>
   </main>
 <?php include "components/footer.php" ?>

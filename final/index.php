@@ -15,6 +15,6 @@
       </div>
    </div>
    <h3 class="indexText">Take a gander at our wide list of recipes. Use the search and filters to find exactly what you're looking for.</h3>
-      <a  class="returnLink" href="<?php echo site_url(); ?>/search.php" class="buttonText">Explore</a>
+      <a  class="returnLink buttonText" href="<?php echo site_url(); ?>/search.php">Explore</a>
     </main>
 <?php include "components/footer.php" ?>
